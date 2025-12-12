@@ -3,6 +3,7 @@ import sys
 import heapq
 import random
 import math
+import os
 
 # --- SETUP PYGAME FIRST TO GET SCREEN SIZE ---
 pygame.init()
@@ -14,7 +15,7 @@ SCREEN_HEIGHT = info.current_h
 
 # Set Fullscreen Mode
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.FULLSCREEN)
-pygame.display.set_caption("Mabrook's Maze: Nether Update")
+pygame.display.set_caption("Steve In Maze")
 clock = pygame.time.Clock()
 
 # --- CONFIGURATION ---
@@ -62,20 +63,32 @@ class MenuState:
         self.scroll_speed = 1.0 
         self.start_ticks = pygame.time.get_ticks()
         
+        # Updated Options (Clean Names)
         self.options = [
-            "Easy (12 Rows)", 
-            "Normal (18 Rows)", 
-            "Hard (25 Rows)", 
-            "VS AI (25 Rows)", 
-            "HELL MODE (25 Rows)",
+            "Easy", 
+            "Normal", 
+            "Hard", 
+            "VS AI", 
+            "Easy Peasy",
             "Quit Game"
         ]
+        
+        # Descriptions corresponding to options
+        self.descriptions = [
+            "Tiny 12-row maze. Perfect for warming up.",
+            "Standard 18-row maze. A balanced challenge.",
+            "Massive 25-row maze. Don't get lost!",
+            "Race a Bot! Collect items & steal points.",
+            "Very easy and nothing to worry about, hehe",
+            "Exit to Desktop."
+        ]
+        
         self.selected_index = 0
         
         self.splash_text = random.choice([
-            "Made by Mabrook!", "CS Project!", "Don't hug Creepers!", 
-            "100% Python!", "Watch out for TNT!", "Nether Update!",
-            "SLAIN BY ENDERMAN!", "Ghast incoming!", "Pearl Clutching!"
+            "Swaza ma!", "Shai Shai ma kawa!", "Gaazara!", 
+            "Don't hug Creepers!", "100% Python!", "Watch out for TNT!",
+            "Nether Update!", "SLAIN BY ENDERMAN!", "Ghast incoming!"
         ])
         
         self.tips = [
@@ -168,6 +181,7 @@ class GameState:
         self.drink_spawn_timer = 12 * FPS
         self.pearl_on_map = False
         self.drink_on_map = False
+        self.high_score = 0
         
         # State Flags
         self.game_active = True
@@ -196,6 +210,10 @@ class GameState:
         self.start_ticks = pygame.time.get_ticks()
         self.warmup_duration = 3000 if mode == "hell" else 5000
         self.is_warming_up = True if mode in ["vs_ai", "hell"] else False
+        
+        # Load High Score for Hell Mode
+        if self.mode == "hell":
+            self.load_high_score()
 
         # 1. Initialize & Generate
         self._init_grid()
@@ -262,6 +280,20 @@ class GameState:
             self.bots.append({'pos': [start_r, start_c], 'path': [], 'timer': 0, 'state': 'CHASING', 'base_speed': 11, 'speed': 11, 'repath_timer': 0, 'id': 0})
             self._generate_rewards(7) 
             self.spawn_creeper() 
+            
+    def load_high_score(self):
+        try:
+            with open("highscore.txt", "r") as f:
+                self.high_score = int(f.read())
+        except:
+            self.high_score = 0
+
+    def save_high_score(self):
+        try:
+            with open("highscore.txt", "w") as f:
+                f.write(str(self.high_score))
+        except:
+            pass
 
     def _generate_rewards(self, count=1):
         if self.mode == "vs_ai":
@@ -559,10 +591,8 @@ class GameState:
         if self.mode == "solo" and self.game_won:
              total = len(self.ai_path_display); self.ai_draw_index = min(total, self.ai_draw_index + max(1, total // (10*30)))
     
-    # Restored move_player method
     def move_player(self, dx, dy):
         if self.paused or not self.game_active or self.is_warming_up: return
-
         self.player_last_dir = (dy, dx)
         new_r, new_c = self.player_pos[0] + dy, self.player_pos[1] + dx
         
@@ -571,19 +601,12 @@ class GameState:
             if self.mode != "hell": self.path_taken.append((new_r, new_c))
             
             for b in self.bombs:
-                if tuple(self.player_pos) == b['pos']:
-                    if self.invincible_timer <= 0:
-                        self.game_active = False; self.game_won = False
-                        self.death_type = "explosion"
-                        self.game_over_text = "BOOM! YOU HIT A TNT."
+                if tuple(self.player_pos) == b['pos'] and self.invincible_timer <= 0:
+                    self.game_active = False; self.game_won = False; self.death_type = "explosion"; self.game_over_text = "BOOM! YOU HIT A TNT."
             
             # Enderman Collision
-            if self.mode == "hell" and self.enderman:
-                if tuple(self.player_pos) == tuple(self.enderman['pos']):
-                    if self.invincible_timer <= 0:
-                        self.game_active = False; self.game_won = False
-                        self.death_type = "explosion"
-                        self.game_over_text = "SLAIN BY ENDERMAN!"
+            if self.mode == "hell" and self.enderman and tuple(self.player_pos) == tuple(self.enderman['pos']) and self.invincible_timer <= 0:
+                self.game_active = False; self.game_won = False; self.death_type = "explosion"; self.game_over_text = "SLAIN BY ENDERMAN!"
 
             if self.mode == "vs_ai" and self.key_spawned and not self.has_key:
                 if tuple(self.player_pos) == self.key_pos: self.has_key = True; self.key_pos = None 
@@ -597,6 +620,10 @@ class GameState:
                         r = self.rewards[i]
                         if r['type'] == 'points':
                             self.user_score += r['val']
+                            if self.mode == "hell":
+                                if self.user_score > self.high_score:
+                                    self.high_score = self.user_score
+                                    self.save_high_score()
                             if self.mode == "vs_ai" and not self.key_spawned: self.spawn_key()
                         elif r['type'] == 'swiftness': self.speed_boost_timer = 5 * FPS 
                         elif r['type'] == 'slowness': self.ai_slow_timer = 5 * FPS 
@@ -627,6 +654,9 @@ class GameRenderer:
     """THE ARTIST: Handles drawing shapes, text, images and UI."""
     def __init__(self, screen):
         self.screen = screen
+        self.font_small = pygame.font.SysFont("Arial", 24)
+        self.font_large = pygame.font.SysFont("Arial", 50)
+        self.font_huge = pygame.font.SysFont("Arial", 120)
         self.assets = {}
         self.wall_textures = []
         self.background_surface = None
@@ -647,6 +677,7 @@ class GameRenderer:
         self.font_small = pygame.font.Font('assets/fonts/Blocky.ttf', 30) if self.assets.get('blocky') else pygame.font.SysFont("Arial", 30)
         self.font_large = pygame.font.Font('assets/fonts/MinTen.ttf', 60) if self.assets.get('minten') else pygame.font.SysFont("Arial", 60)
         self.font_huge = pygame.font.Font('assets/fonts/Minecrafter.ttf', 120) if self.assets.get('minecrafter') else pygame.font.SysFont("Arial", 120)
+        self.font_desc = pygame.font.Font('assets/fonts/Blocky.ttf', 20) if self.assets.get('blocky') else pygame.font.SysFont("Arial", 20)
 
     def load_assets(self):
         # Fonts check
@@ -657,15 +688,19 @@ class GameRenderer:
                 self.assets[k] = True 
             except: self.assets[k] = False
 
-        # Menu Panorama
+        # Menu Panorama - Updated to pick random scene
         try:
-            self.menu_panorama = pygame.image.load('assets/Main Menu/Scene1.png')
+            scenes = ['Scene1.png', 'Scene2.png', 'Scene3.png']
+            chosen_scene = random.choice(scenes)
+            self.menu_panorama = pygame.image.load(f'assets/Main Menu/{chosen_scene}')
             # Scale to height
             ratio = self.menu_panorama.get_width() / self.menu_panorama.get_height()
             new_h = SCREEN_HEIGHT
             new_w = int(new_h * ratio)
             self.menu_panorama = pygame.transform.scale(self.menu_panorama, (new_w, new_h))
+            print(f"Loaded Menu Background: {chosen_scene}")
         except:
+            print(f"Failed to load menu background: assets/Main Menu/{chosen_scene}")
             self.menu_panorama = None
 
         # Game Assets
@@ -924,10 +959,10 @@ class GameRenderer:
 
         # 3. Draw Title (Left Aligned)
         if title_alpha > 0:
-            title_s = self.font_title.render("Mabrook's Maze", True, WHITE)
+            title_s = self.font_title.render("Steve In Maze", True, WHITE)
             title_s.set_alpha(title_alpha)
             # Drop shadow
-            shadow_s = self.font_title.render("Mabrook's Maze", True, (50,50,50)); shadow_s.set_alpha(title_alpha)
+            shadow_s = self.font_title.render("Steve In Maze", True, (50,50,50)); shadow_s.set_alpha(title_alpha)
             self.screen.blit(shadow_s, (54, 104))
             self.screen.blit(title_s, (50, 100))
             
@@ -984,6 +1019,32 @@ class GameRenderer:
                 if is_selected:
                     # Draw white border inside
                     pygame.draw.rect(self.screen, WHITE, inner_rect, 2)
+                    
+                    # --- NEW: Draw Description Tooltip to the right ---
+                    desc_text = menu_state.descriptions[i]
+                    
+                    # Render text first to get size
+                    desc_s = self.font_desc.render(desc_text, True, WHITE) # Use Blocky font
+                    desc_w = desc_s.get_width()
+                    desc_h = desc_s.get_height()
+                    
+                    # Dynamic Box Size
+                    tooltip_w = desc_w + 40 # Padding
+                    tooltip_h = desc_h + 30 # Padding
+                    
+                    # Tooltip Position (Increased distance)
+                    tooltip_x = btn_x + btn_w + 60 # Increased from 20
+                    tooltip_rect = pygame.Rect(tooltip_x, btn_y + (btn_h - tooltip_h)//2, tooltip_w, tooltip_h) # Center vertically relative to button
+                    
+                    # Draw Tooltip Background
+                    s = pygame.Surface((tooltip_w, tooltip_h), pygame.SRCALPHA)
+                    s.fill((0, 0, 0, 180)) 
+                    self.screen.blit(s, (tooltip_x, btn_y + (btn_h - tooltip_h)//2))
+                    pygame.draw.rect(self.screen, (100, 100, 100), tooltip_rect, 2) 
+                    
+                    # Draw Description Text
+                    desc_rect = desc_s.get_rect(center=tooltip_rect.center)
+                    self.screen.blit(desc_s, desc_rect)
                 
                 # Draw Text
                 txt_s = self.font_option.render(opt, True, text_col)
