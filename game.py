@@ -6,6 +6,8 @@ import math
 import os
 
 # --- SETUP PYGAME FIRST TO GET SCREEN SIZE ---
+# Pre-init mixer with LOWER BUFFER (1024) - Safe low latency
+pygame.mixer.pre_init(44100, -16, 2, 1024)
 pygame.init()
 
 # Get the current resolution of the monitor
@@ -56,14 +58,77 @@ RED_HEART = (255, 0, 0)
 GOLD_KEY = (255, 215, 0)
 PEARL_COLOR = (0, 255, 200)
 
+class SoundManager:
+    """THE DJ: Handles all background music."""
+    def __init__(self):
+        self.music_tracks = []
+        self.current_music = None
+        self.load_music_tracks()
+
+    def load_music_tracks(self):
+        bg_folder = os.path.abspath('assets/Music/Background/')
+        try:
+            if os.path.exists(bg_folder):
+                for f in os.listdir(bg_folder):
+                    if f.lower().endswith('.mp3'):
+                        self.music_tracks.append(os.path.join(bg_folder, f))
+            else:
+                print(f"Warning: Music folder not found at {bg_folder}")
+        except Exception as e:
+            print(f"Warning: Could not scan music directory. {e}")
+
+    def play_bgm(self, context):
+        """
+        Context: 'menu', 'hell', 'normal'.
+        Logic: 
+        - Hell: Must play Pigstep.
+        - Menu/Normal: Play any non-Pigstep track.
+          CRITICAL: If already playing a non-Pigstep track, DO NOT restart/change it.
+        """
+        try:
+            # 1. Identify what kind of track we need
+            need_pigstep = (context == 'hell')
+            
+            # 2. Check what is currently playing
+            is_playing_pigstep = (self.current_music is not None and 'Pigstep' in self.current_music)
+            
+            # 3. Decide if we need to switch
+            if need_pigstep:
+                if not is_playing_pigstep:
+                    # Switch TO Pigstep
+                    target = next((t for t in self.music_tracks if 'Pigstep' in t), None)
+                    if target: self._start_track(target)
+            else:
+                # We need Standard Music
+                if is_playing_pigstep or self.current_music is None:
+                    # We are coming from Hell (or startup). Switch to random standard track.
+                    choices = [t for t in self.music_tracks if 'Pigstep' not in t]
+                    if choices:
+                        target = random.choice(choices)
+                        self._start_track(target)
+                # ELSE: We are already playing standard music. Continue uninterrupted.
+
+        except Exception as e:
+            print(f"Error playing music: {e}")
+
+    def _start_track(self, track_path):
+        """Internal helper to load and play a track"""
+        pygame.mixer.music.load(track_path)
+        pygame.mixer.music.play(-1) # Loop forever
+        pygame.mixer.music.set_volume(0.3) # Reduced Volume
+        self.current_music = track_path
+
 class MenuState:
     """THE FACE: Handles the Main Menu logic, animations, and input."""
-    def __init__(self):
+    def __init__(self, sound_manager):
+        self.sound_manager = sound_manager
         self.scroll_x = 0
         self.scroll_speed = 1.0 
         self.start_ticks = pygame.time.get_ticks()
         
-        # Updated Options (Clean Names)
+        # Start Menu Music (Standard)
+        self.sound_manager.play_bgm('menu')
+        
         self.options = [
             "Easy", 
             "Normal", 
@@ -73,7 +138,6 @@ class MenuState:
             "Quit Game"
         ]
         
-        # Descriptions corresponding to options
         self.descriptions = [
             "Tiny 12-row maze. Perfect for warming up.",
             "Standard 18-row maze. A balanced challenge.",
@@ -138,9 +202,14 @@ class MenuState:
 
 class GameState:
     """THE BRAIN: Handles all logic, rules, AI moving, and grid management."""
-    def __init__(self, rows, mode):
+    def __init__(self, rows, mode, sound_manager):
         self.mode = mode 
+        self.sound = sound_manager
         
+        # Start appropriate music logic
+        if mode == "hell": self.sound.play_bgm('hell')
+        else: self.sound.play_bgm('normal')
+
         # DYNAMIC GRID SIZING
         self.rows = rows
         available_height = SCREEN_HEIGHT - UI_HEIGHT
@@ -157,6 +226,7 @@ class GameState:
         self.move_timer = 0
         self.base_move_delay = 3
         self.move_delay = self.base_move_delay
+        self.step_sound_timer = 0 
         
         # Buff/Debuff Timers (Frames)
         self.speed_boost_timer = 0
@@ -272,7 +342,8 @@ class GameState:
 
     def _setup_entities(self):
         if self.mode == "vs_ai":
-            self.bots.append({'pos': [1, 1], 'path': [], 'timer': 0, 'state': 'THINKING', 'base_speed': 8, 'speed': 8, 'score': 0})
+            # Bot now initialized with cooldown field
+            self.bots.append({'pos': [1, 1], 'path': [], 'timer': 0, 'state': 'THINKING', 'base_speed': 8, 'speed': 8, 'score': 0, 'cooldown': 0})
             self._generate_rewards(5)
         elif self.mode == "hell":
             start_r, start_c = 1, self.cols - 2
@@ -542,11 +613,17 @@ class GameState:
 
         for i, bot in enumerate(self.bots):
             bot['timer'] += 1
+            # Cooldown logic for VS AI
+            if bot.get('cooldown', 0) > 0: bot['cooldown'] -= 1
+
             if self.mode == "vs_ai":
-                if tuple(bot['pos']) == tuple(self.player_pos):
+                if tuple(bot['pos']) == tuple(self.player_pos) and bot.get('cooldown', 0) <= 0:
                     if self.has_shield: self.has_shield = False; self.game_over_text = "Shield Blocked Theft!" 
                     else:
                         steal_amount = min(10, self.user_score); self.user_score -= steal_amount; bot['score'] += steal_amount
+                    # Apply cooldown to prevent continuous stealing in subsequent frames
+                    bot['cooldown'] = 60 # 2 seconds (30 FPS * 2)
+
                 if bot['state'] == 'THINKING' and bot['timer'] >= 30:
                     target = None; best_dist = float('inf')
                     for rew in self.rewards:
@@ -598,13 +675,12 @@ class GameState:
         
         if self.grid[new_r][new_c] == 0:
             self.player_pos = [new_r, new_c]
-            if self.mode != "hell": self.path_taken.append((new_r, new_c))
+            if self.mode == "solo": self.path_taken.append((new_r, new_c))
             
             for b in self.bombs:
                 if tuple(self.player_pos) == b['pos'] and self.invincible_timer <= 0:
                     self.game_active = False; self.game_won = False; self.death_type = "explosion"; self.game_over_text = "BOOM! YOU HIT A TNT."
             
-            # Enderman Collision
             if self.mode == "hell" and self.enderman and tuple(self.player_pos) == tuple(self.enderman['pos']) and self.invincible_timer <= 0:
                 self.game_active = False; self.game_won = False; self.death_type = "explosion"; self.game_over_text = "SLAIN BY ENDERMAN!"
 
@@ -654,9 +730,6 @@ class GameRenderer:
     """THE ARTIST: Handles drawing shapes, text, images and UI."""
     def __init__(self, screen):
         self.screen = screen
-        self.font_small = pygame.font.SysFont("Arial", 24)
-        self.font_large = pygame.font.SysFont("Arial", 50)
-        self.font_huge = pygame.font.SysFont("Arial", 120)
         self.assets = {}
         self.wall_textures = []
         self.background_surface = None
@@ -1097,7 +1170,8 @@ class GameRenderer:
 # --- MAIN LOOP ---
 if __name__ == "__main__":
     renderer = GameRenderer(screen)
-    menu = MenuState()
+    sound_manager = SoundManager() # Initialize Sound Manager
+    menu = MenuState(sound_manager) # Pass sound to menu for BGM
     game = None 
     
     while True:
@@ -1112,10 +1186,10 @@ if __name__ == "__main__":
                 # GAME INPUT
                 if event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_ESCAPE:
-                        if game: game = None; menu = MenuState() # Reset menu state on return
+                        if game: game = None; menu = MenuState(sound_manager) # Reset menu state on return
                     if event.key == pygame.K_p: game.paused = not game.paused
                     elif event.key == pygame.K_r:
-                        if game.paused or not game.game_active or game.game_won: game = None; menu = MenuState()
+                        if game.paused or not game.game_active or game.game_won: game = None; menu = MenuState(sound_manager)
                     elif event.key == pygame.K_1 and game.mode == "hell": game.use_pearl()
                     elif event.key == pygame.K_2 and game.mode == "hell": game.use_energy_drink()
             else:
@@ -1123,11 +1197,11 @@ if __name__ == "__main__":
                 if event.type == pygame.KEYDOWN:
                     choice = menu.handle_input(event)
                     if choice is not None:
-                        if choice == 0: game = GameState(12, "solo")
-                        elif choice == 1: game = GameState(18, "solo")
-                        elif choice == 2: game = GameState(25, "solo")
-                        elif choice == 3: game = GameState(25, "vs_ai")
-                        elif choice == 4: game = GameState(25, "hell")
+                        if choice == 0: game = GameState(12, "solo", sound_manager)
+                        elif choice == 1: game = GameState(18, "solo", sound_manager)
+                        elif choice == 2: game = GameState(25, "solo", sound_manager)
+                        elif choice == 3: game = GameState(25, "vs_ai", sound_manager)
+                        elif choice == 4: game = GameState(25, "hell", sound_manager)
                         elif choice == 5: pygame.quit(); sys.exit()
                         
                         if game: renderer.init_level(game)
