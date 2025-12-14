@@ -1,0 +1,710 @@
+([('SteveInMaze.exe',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\build\\SteveInMaze\\SteveInMaze.exe',
+   'EXECUTABLE'),
+  ('python312.dll', 'C:\\Python312\\python312.dll', 'BINARY'),
+  ('numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy.libs\\msvcp140-263139962577ecda4cd9469ca360a746.dll',
+   'BINARY'),
+  ('numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy.libs\\libscipy_openblas64_-13e2df515630b4a41f92893938845698.dll',
+   'BINARY'),
+  ('SDL2_ttf.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_ttf.dll',
+   'BINARY'),
+  ('SDL2.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2.dll',
+   'BINARY'),
+  ('SDL2_mixer.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_mixer.dll',
+   'BINARY'),
+  ('libjpeg-9.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libjpeg-9.dll',
+   'BINARY'),
+  ('libopusfile-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libopusfile-0.dll',
+   'BINARY'),
+  ('zlib1.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\zlib1.dll',
+   'BINARY'),
+  ('libpng16-16.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libpng16-16.dll',
+   'BINARY'),
+  ('libopus-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libopus-0.dll',
+   'BINARY'),
+  ('libwebp-7.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libwebp-7.dll',
+   'BINARY'),
+  ('libogg-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libogg-0.dll',
+   'BINARY'),
+  ('SDL2_image.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_image.dll',
+   'BINARY'),
+  ('portmidi.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\portmidi.dll',
+   'BINARY'),
+  ('freetype.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\freetype.dll',
+   'BINARY'),
+  ('libmodplug-1.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libmodplug-1.dll',
+   'BINARY'),
+  ('libtiff-5.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libtiff-5.dll',
+   'BINARY'),
+  ('unicodedata.pyd', 'C:\\Python312\\DLLs\\unicodedata.pyd', 'EXTENSION'),
+  ('_lzma.pyd', 'C:\\Python312\\DLLs\\_lzma.pyd', 'EXTENSION'),
+  ('_bz2.pyd', 'C:\\Python312\\DLLs\\_bz2.pyd', 'EXTENSION'),
+  ('_decimal.pyd', 'C:\\Python312\\DLLs\\_decimal.pyd', 'EXTENSION'),
+  ('_hashlib.pyd', 'C:\\Python312\\DLLs\\_hashlib.pyd', 'EXTENSION'),
+  ('select.pyd', 'C:\\Python312\\DLLs\\select.pyd', 'EXTENSION'),
+  ('_socket.pyd', 'C:\\Python312\\DLLs\\_socket.pyd', 'EXTENSION'),
+  ('_overlapped.pyd', 'C:\\Python312\\DLLs\\_overlapped.pyd', 'EXTENSION'),
+  ('_ssl.pyd', 'C:\\Python312\\DLLs\\_ssl.pyd', 'EXTENSION'),
+  ('_queue.pyd', 'C:\\Python312\\DLLs\\_queue.pyd', 'EXTENSION'),
+  ('_ctypes.pyd', 'C:\\Python312\\DLLs\\_ctypes.pyd', 'EXTENSION'),
+  ('_multiprocessing.pyd',
+   'C:\\Python312\\DLLs\\_multiprocessing.pyd',
+   'EXTENSION'),
+  ('pyexpat.pyd', 'C:\\Python312\\DLLs\\pyexpat.pyd', 'EXTENSION'),
+  ('_asyncio.pyd', 'C:\\Python312\\DLLs\\_asyncio.pyd', 'EXTENSION'),
+  ('_wmi.pyd', 'C:\\Python312\\DLLs\\_wmi.pyd', 'EXTENSION'),
+  ('PIL\\_webp.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_webp.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingtk.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_imagingtk.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_avif.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_avif.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingcms.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_imagingcms.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('PIL\\_imagingmath.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_imagingmath.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\_core\\_multiarray_tests.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_core\\_multiarray_tests.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\_core\\_multiarray_umath.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\_core\\_multiarray_umath.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('charset_normalizer\\md__mypyc.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\charset_normalizer\\md__mypyc.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('charset_normalizer\\md.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\charset_normalizer\\md.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\linalg\\_umath_linalg.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\linalg\\_umath_linalg.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\mtrand.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\mtrand.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_sfc64.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_sfc64.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_philox.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_philox.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_pcg64.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_pcg64.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_mt19937.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_mt19937.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\bit_generator.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\bit_generator.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_generator.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_generator.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_bounded_integers.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_bounded_integers.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\random\\_common.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\random\\_common.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('numpy\\fft\\_pocketfft_umath.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy\\fft\\_pocketfft_umath.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('yaml\\_yaml.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\yaml\\_yaml.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('_elementtree.pyd', 'C:\\Python312\\DLLs\\_elementtree.pyd', 'EXTENSION'),
+  ('PIL\\_imaging.cp312-win_amd64.pyd',
+   'C:\\Python312\\Lib\\site-packages\\PIL\\_imaging.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\imageext.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\imageext.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\scrap.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\scrap.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mixer.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\mixer.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mixer_music.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\mixer_music.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\font.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\font.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\_freetype.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\_freetype.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\transform.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\transform.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\time.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\time.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\pixelarray.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\pixelarray.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mask.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\mask.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\surface.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\surface.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\pixelcopy.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\pixelcopy.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\mouse.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\mouse.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\key.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\key.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\joystick.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\joystick.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\image.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\image.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\event.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\event.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\draw.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\draw.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\display.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\display.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\math.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\math.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\bufferproxy.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\bufferproxy.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\color.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\color.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\surflock.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\surflock.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\rwobject.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\rwobject.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\rect.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\rect.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\constants.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\constants.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('pygame\\base.cp312-win_amd64.pyd',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\base.cp312-win_amd64.pyd',
+   'EXTENSION'),
+  ('api-ms-win-crt-math-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-math-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-convert-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-convert-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-conio-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-conio-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-stdio-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-stdio-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140.dll', 'C:\\Python312\\VCRUNTIME140.dll', 'BINARY'),
+  ('api-ms-win-crt-heap-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-string-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-runtime-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-runtime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-environment-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-environment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-time-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-time-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-process-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-process-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-locale-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-locale-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-filesystem-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-filesystem-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-crt-utility-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-utility-l1-1-0.dll',
+   'BINARY'),
+  ('VCRUNTIME140_1.dll', 'C:\\Python312\\VCRUNTIME140_1.dll', 'BINARY'),
+  ('api-ms-win-crt-private-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-crt-private-l1-1-0.dll',
+   'BINARY'),
+  ('pygame\\SDL2.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2.dll',
+   'BINARY'),
+  ('pygame\\libopus-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libopus-0.dll',
+   'BINARY'),
+  ('pygame\\libogg-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libogg-0.dll',
+   'BINARY'),
+  ('pygame\\zlib1.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\zlib1.dll',
+   'BINARY'),
+  ('pygame\\libjpeg-9.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libjpeg-9.dll',
+   'BINARY'),
+  ('libcrypto-3.dll', 'C:\\Python312\\DLLs\\libcrypto-3.dll', 'BINARY'),
+  ('libssl-3.dll', 'C:\\Python312\\DLLs\\libssl-3.dll', 'BINARY'),
+  ('libffi-8.dll', 'C:\\Python312\\DLLs\\libffi-8.dll', 'BINARY'),
+  ('pygame\\libpng16-16.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\libpng16-16.dll',
+   'BINARY'),
+  ('pygame\\SDL2_image.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_image.dll',
+   'BINARY'),
+  ('pygame\\SDL2_mixer.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_mixer.dll',
+   'BINARY'),
+  ('pygame\\SDL2_ttf.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\SDL2_ttf.dll',
+   'BINARY'),
+  ('pygame\\freetype.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\freetype.dll',
+   'BINARY'),
+  ('ucrtbase.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\ucrtbase.dll',
+   'BINARY'),
+  ('api-ms-win-core-libraryloader-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-libraryloader-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-fibers-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-fibers-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-file-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-localization-l1-2-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-localization-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-sysinfo-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-sysinfo-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-rtlsupport-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-debug-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-debug-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-synch-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-memory-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-memory-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-heap-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-heap-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-string-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-string-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processenvironment-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-processenvironment-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-errorhandling-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-errorhandling-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-processthreads-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-processthreads-l1-1-1.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-processthreads-l1-1-1.dll',
+   'BINARY'),
+  ('api-ms-win-core-profile-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-profile-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-handle-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-handle-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-console-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-console-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l2-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-file-l2-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-synch-l1-2-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-synch-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-interlocked-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-interlocked-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-util-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-util-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-file-l1-2-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-file-l1-2-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-timezone-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-timezone-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-datetime-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-datetime-l1-1-0.dll',
+   'BINARY'),
+  ('api-ms-win-core-namedpipe-l1-1-0.dll',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Local\\Programs\\MiKTeX\\miktex\\bin\\x64\\api-ms-win-core-namedpipe-l1-1-0.dll',
+   'BINARY'),
+  ('assets\\Main Menu\\Scene1.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\Main '
+   'Menu\\Scene1.png',
+   'DATA'),
+  ('assets\\Main Menu\\Scene2.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\Main '
+   'Menu\\Scene2.png',
+   'DATA'),
+  ('assets\\Main Menu\\Scene3.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\Main '
+   'Menu\\Scene3.png',
+   'DATA'),
+  ('assets\\Music\\Background\\Aria.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Background\\Aria.mp3',
+   'DATA'),
+  ('assets\\Music\\Background\\Droopy.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Background\\Droopy.mp3',
+   'DATA'),
+  ('assets\\Music\\Background\\Hagstorm.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Background\\Hagstorm.mp3',
+   'DATA'),
+  ('assets\\Music\\Background\\Pigstep.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Background\\Pigstep.mp3',
+   'DATA'),
+  ('assets\\Music\\Creeper\\Creeper.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Creeper\\Creeper.mp3',
+   'DATA'),
+  ('assets\\Music\\Drink_Pearl\\Drinking.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Drink_Pearl\\Drinking.mp3',
+   'DATA'),
+  ('assets\\Music\\Drink_Pearl\\Pearl.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Drink_Pearl\\Pearl.mp3',
+   'DATA'),
+  ('assets\\Music\\Enderman\\Enderman.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Enderman\\Enderman.mp3',
+   'DATA'),
+  ('assets\\Music\\Ghast\\Cry1.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Ghast\\Cry1.mp3',
+   'DATA'),
+  ('assets\\Music\\Ghast\\Cry2.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Ghast\\Cry2.mp3',
+   'DATA'),
+  ('assets\\Music\\Ghast\\Cry3.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Ghast\\Cry3.mp3',
+   'DATA'),
+  ('assets\\Music\\Ghast\\Cry4.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Ghast\\Cry4.mp3',
+   'DATA'),
+  ('assets\\Music\\Piglin\\Piglin1.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Piglin\\Piglin1.mp3',
+   'DATA'),
+  ('assets\\Music\\Piglin\\Piglin2.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\Piglin\\Piglin2.mp3',
+   'DATA'),
+  ('assets\\Music\\walk\\walk.mp3',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\Music\\walk\\walk.mp3',
+   'DATA'),
+  ('assets\\creeper.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\creeper.png',
+   'DATA'),
+  ('assets\\creeper2.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\creeper2.png',
+   'DATA'),
+  ('assets\\death.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\death.png',
+   'DATA'),
+  ('assets\\enderman.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\enderman.png',
+   'DATA'),
+  ('assets\\explosion.gif',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\explosion.gif',
+   'DATA'),
+  ('assets\\fire_charge.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\fire_charge.png',
+   'DATA'),
+  ('assets\\fonts\\Blocky.otf',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\fonts\\Blocky.otf',
+   'DATA'),
+  ('assets\\fonts\\MinTen.ttf',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\fonts\\MinTen.ttf',
+   'DATA'),
+  ('assets\\fonts\\Minecrafter.ttf',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\fonts\\Minecrafter.ttf',
+   'DATA'),
+  ('assets\\ghast.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\ghast.png',
+   'DATA'),
+  ('assets\\heart.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\heart.png',
+   'DATA'),
+  ('assets\\key.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\key.png',
+   'DATA'),
+  ('assets\\nether1.webp',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\nether1.webp',
+   'DATA'),
+  ('assets\\nether2.webp',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\nether2.webp',
+   'DATA'),
+  ('assets\\nether3.jpeg',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\nether3.jpeg',
+   'DATA'),
+  ('assets\\pearl.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\pearl.png',
+   'DATA'),
+  ('assets\\piglin.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\piglin.png',
+   'DATA'),
+  ('assets\\portal.jpg',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\portal.jpg',
+   'DATA'),
+  ('assets\\slowness.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\slowness.png',
+   'DATA'),
+  ('assets\\steve.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\steve.png',
+   'DATA'),
+  ('assets\\swiftness.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\assets\\swiftness.png',
+   'DATA'),
+  ('assets\\tnt.png',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\tnt.png',
+   'DATA'),
+  ('assets\\win.gif',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in Maze\\assets\\win.gif',
+   'DATA'),
+  ('pygame\\pygame_icon.bmp',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\pygame_icon.bmp',
+   'DATA'),
+  ('pygame\\freesansbold.ttf',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\pygame\\freesansbold.ttf',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\WHEEL',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\METADATA',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\INSTALLER',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\top_level.txt',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\LICENSE',
+   'DATA'),
+  ('setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\importlib_metadata-8.0.0.dist-info\\RECORD',
+   'DATA'),
+  ('setuptools\\_vendor\\jaraco\\text\\Lorem ipsum.txt',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\setuptools\\_vendor\\jaraco\\text\\Lorem '
+   'ipsum.txt',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\METADATA',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\METADATA',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\DELVEWHEEL',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\DELVEWHEEL',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\RECORD',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\RECORD',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\entry_points.txt',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\entry_points.txt',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\LICENSE.txt',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\LICENSE.txt',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\INSTALLER',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\INSTALLER',
+   'DATA'),
+  ('numpy-2.2.6.dist-info\\WHEEL',
+   'C:\\Users\\Pavilion '
+   '15\\AppData\\Roaming\\Python\\Python312\\site-packages\\numpy-2.2.6.dist-info\\WHEEL',
+   'DATA'),
+  ('base_library.zip',
+   'C:\\Users\\Pavilion 15\\Desktop\\main\\Steve in '
+   'Maze\\build\\SteveInMaze\\base_library.zip',
+   'DATA')],)
